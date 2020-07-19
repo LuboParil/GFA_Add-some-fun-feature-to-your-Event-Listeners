@@ -2,3 +2,14 @@
 	display: block;
 	margin: 30px;
 }
+.container {
+	margin: 25px;
+	border: 1px solid grey;
+	display: table;
+}
+#bgColor {
+	margin: 5px;
+}
+.container .btn {
+	margin: 0 5px 5px;
+}

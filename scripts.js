@@ -19,20 +19,35 @@ $('.btn-change-previous').click( () => {
 	}
 });
 
+
+
+
 let initialText = $('.btn-change-background').text();
 let bgInitialColor = $('.btn').css('background-color');
 let bgChanged = false;
-$('.btn-change-background').click( () => {
 
-	if (bgChanged === false) {
-		$('.btn').css('background-color', 'green');
-		$('.btn-change-background').text('Oh, I like this!');
-		bgChanged = true;
-	} else {
-		$('.btn').css('background-color', bgInitialColor);
-		$('.btn-change-background').text(initialText);
-		bgChanged = false;
+let clickedOnce = false;
+
+
+$('.btn-change-background').click( () => {
+	if (clickedOnce === false) {
+		// if (bgChanged === false) {
+		// 	$('.btn').css('background-color', 'green');
+		// 	$('.btn-change-background').text('Oh, I like this!');
+		// 	bgChanged = true;
+		// } else {
+		// 	$('.btn').css('background-color', bgInitialColor);
+		// 	$('.btn-change-background').text(initialText);
+		// 	bgChanged = false;
+		// }
+		let newBgColor = $('#bgColor').val();
+		$('.btn').css('background', newBgColor);
+		
+		clickedOnce = true;
 	}
 }); 
+	
+
+
 
 
